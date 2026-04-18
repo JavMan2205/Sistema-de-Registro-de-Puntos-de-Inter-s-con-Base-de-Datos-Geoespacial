@@ -21,3 +21,24 @@ El sistema está orquestado mediante **Docker Compose** y se divide en tres capa
 2. Ejecute el siguiente comando en su terminal para levantar los servicios:
 
 # docker compose up --build
+
+El sistema estará disponible en: http://localhost/
+
+Guía de Uso de la API
+Documentación Interactiva (Swagger)
+Acceda a la interfaz de pruebas en: http://localhost/docs
+
+Endpoints Principales
+Listado General: GET /puntos/ - Muestra todos los POIs (incluyendo los 5 puntos precargados de Guatemala).
+
+Registro de Punto: POST /puntos/ - Permite enviar un JSON con nombre, descripcion, categoria, latitud y longitud.
+
+Filtro Geoespacial: GET /puntos/?lat={lat}&lon={lon}&radio_km={km} - Retorna solo los puntos dentro del radio especificado.
+
+Persistencia y Seguridad
+Persistencia: Se utiliza un volumen de Docker (geo_data) para asegurar que la información no se pierda al reiniciar los contenedores.
+
+Redes: Los servicios se comunican a través de una red interna bridge (geo_network), exponiendo únicamente el puerto 80 del proxy al exterior.
+
+Desarrollado por: Javier
+Entorno de desarrollo: Intel Core i5 12450H | NVIDIA GTX 1650 | WSL 2 (Ubuntu)
