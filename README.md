@@ -40,5 +40,6 @@ Persistencia: Se utiliza un volumen de Docker (geo_data) para asegurar que la in
 
 Redes: Los servicios se comunican a través de una red interna bridge (geo_network), exponiendo únicamente el puerto 80 del proxy al exterior.
 
-Desarrollado por: Javier
+Desarrollado por: Javier Escobar
+
 Entorno de desarrollo: Intel Core i5 12450H | NVIDIA GTX 1650 | WSL 2 (Ubuntu)
